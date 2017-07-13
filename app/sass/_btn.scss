@@ -12,6 +12,12 @@
 	color: $main-white-color;
 	@include main-font();
 	font-weight: 700;
+	letter-spacing: 0.4px;
+	@include transition( box-shadow, $animation-time, 0 );
+
+	&:hover {
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+	}
 }
 
 @media (min-width: $tablet-portrait) {

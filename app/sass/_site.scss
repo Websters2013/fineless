@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 125px 40px;
+    margin: 0 125px 85px;
     padding: 0 15px;
   }
   &__footer {
@@ -71,7 +71,7 @@
     position: relative;
     z-index: 1;
     margin: 0 140px;
-    padding: 0 15px 0 500px;
+    padding: 0 15px 0 360px;
   }
   &__content {
     position: relative;
@@ -82,19 +82,23 @@
     position: fixed;
     z-index: 2;
     left: 140px;
-    max-width: 360px;
+    width: 330px;
+    padding-top: 3px;
   }
   &__title {
-    margin-bottom: 50px;
+    max-width: 690px;
+    margin-bottom: 51px;
     font-size: 40px;
-    letter-spacing: 4px;
-    line-height: 1;
+    letter-spacing: 7.9px;
+    line-height: 1.2;
     color: $main-title-color;
     text-transform: uppercase;
     @include title-font()
   }
   &__text {
-    margin-bottom: 50px;
+    max-width: 690px;
+    margin-bottom: 30px;
+    letter-spacing: 0.2px;
   }
 }
 

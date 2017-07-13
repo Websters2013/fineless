@@ -1,0 +1,35 @@
+
+.problems {
+	margin-bottom: 60px;
+
+	&__list {
+
+	}
+	&__item {
+		margin-bottom: 17.5px;
+	}
+	&__item-icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&__item-wrap {
+		position: relative;
+		padding-left: 60px;
+	}
+	&__item-title {
+		margin-bottom: 15px;
+		font-size: 22px;
+		font-weight: 700;
+	}
+	&__item-text {
+
+	}
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+

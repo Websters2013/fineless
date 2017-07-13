@@ -1,0 +1,53 @@
+
+.solution {
+	margin-bottom: 60px;
+
+	&__list {
+		counter-reset: list
+	}
+	&__item {
+		position: relative;
+		margin-bottom: 17.5px;
+	}
+	&__item-number {
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: $main-white-color;
+		box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+
+		&:after {
+			position: absolute;
+			top: -5px;
+			right: 5px;
+			font-size: 45px;
+			font-weight: bold;
+			color: $main-green-color;
+			text-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
+			counter-increment: list;
+			content: counter(list) '';
+		}
+	}
+	&__item-wrap {
+		position: relative;
+		padding-left: 60px;
+	}
+	&__item-title {
+		margin-bottom: 15px;
+		font-size: 22px;
+		font-weight: 700;
+	}
+	&__item-text {
+
+	}
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+

@@ -1,0 +1,39 @@
+
+.questions {
+	margin-bottom: 60px;
+
+	.site__title {
+		margin-bottom: 15px;
+	}
+
+	&__list {
+
+	}
+	&__item {
+		position: relative;
+		margin-bottom: 10px;
+	}
+	&__item-head {
+		position: relative;
+		font-weight: 700;
+		color: $main-green-color;
+		user-select: none;
+		cursor: pointer;
+	}
+	&__item-sub {
+		display: none;
+		padding-top: 5px;
+		margin-bottom: 8px;
+
+		p {
+
+		}
+	}
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+

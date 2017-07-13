@@ -1,0 +1,22 @@
+.navigation {
+	display: flex;
+	flex-flow: column;
+
+	> a {
+		font-size: 26px;
+		line-height: 1.77;
+		color: $main-text-color;
+		@include transition( all, $animation-time, 0 );
+
+		&:hover {
+			color: $main-green-color;
+		}
+	}
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+

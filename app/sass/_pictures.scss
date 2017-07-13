@@ -1,0 +1,30 @@
+
+.pictures {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 60px;
+
+	&__item {
+		width: 33.333%;
+		height: 10vw;
+		background-size: cover;
+		background-position: center;
+
+		&:nth-child(1) {
+			background: grey;
+		}
+		&:nth-child(2) {
+			background: green;
+		}
+		&:nth-child(3) {
+			background: yellow;
+		}
+	}
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+

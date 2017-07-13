@@ -3,12 +3,31 @@
 	margin-bottom: 116px;
 
 	.site__title {
-		margin-bottom: 32px;
+		margin-bottom: 10px;
 	}
 }
 
-@media (min-width: $tablet-portrait) {
+@media (min-width: $tablet-landscape) {
 
+	.prices {
+		margin-bottom: 116px;
+
+		.site__title {
+			margin-bottom: 32px;
+		}
+	}
+
+}
+
+@media (min-width: $desktop) {
+
+	.prices {
+		margin-bottom: 116px;
+
+		.site__title {
+			margin-bottom: 32px;
+		}
+	}
 
 }
 

@@ -1,18 +1,34 @@
-
 .road {
-	position: absolute;
-	top: -152px;
-	left: 0;
-	width: 100%;
+	display: none;
+}
 
-	svg {
+@media (min-width: $tablet-landscape) {
+
+	.road {
+		position: absolute;
+		display: block;
+		top: -152px;
+		left: 0;
 		width: 100%;
+
+		svg {
+			width: 100%;
+		}
 	}
 }
 
-@media (min-width: $tablet-portrait) {
+@media (min-width: $desktop) {
 
+	.road {
+		position: absolute;
+		top: -152px;
+		left: 0;
+		width: 100%;
 
+		svg {
+			width: 100%;
+		}
+	}
 }
 
 

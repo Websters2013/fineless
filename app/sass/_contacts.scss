@@ -7,14 +7,10 @@
 	}
 	&__list {
 		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-		padding-right: 18px;
+		flex-flow: column;
 	}
 	&__item {
-		display: inline-block;
-		vertical-align: top;
-		font-size: 22px;
+		font-size: 16px;
 		color: $main-text-color;
 
 		&:before {
@@ -26,18 +22,16 @@
 		}
 		&_mail:before {
 			top: 4px;
-			width: 120px;
-			height: 123px;
-			margin-left: -18px;
+			width: 60px;
+			height: 62px;
 			background-image: url('../img/svgs/mail.svg');
 			background-repeat: no-repeat;
 			background-size: contain;
 		}
 		&_phone:before {
 			top: -3px;
-			width: 111px;
-			height: 140px;
-			margin-right: -7px;
+			width: 55px;
+			height: 70px;
 			background-image: url('../img/svgs/phone.svg');
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -45,9 +39,105 @@
 	}
 }
 
-@media (min-width: $tablet-portrait) {
+@media (min-width: $tablet-landscape) {
 
+	.contacts {
+		margin-bottom: 127px;
+
+		.site__title {
+			margin-bottom: 35px;
+		}
+		&__list {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			padding-right: 18px;
+		}
+		&__item {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 22px;
+			color: $main-text-color;
+
+			&:before {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: -1px;
+				content: '';
+			}
+			&_mail:before {
+				top: 4px;
+				width: 120px;
+				height: 123px;
+				margin-left: -18px;
+				background-image: url('../img/svgs/mail.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			&_phone:before {
+				top: -3px;
+				width: 111px;
+				height: 140px;
+				margin-right: -7px;
+				background-image: url('../img/svgs/phone.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+	}
 
 }
+
+@media (min-width: $desktop) {
+
+	.contacts {
+		margin-bottom: 127px;
+
+		.site__title {
+			margin-bottom: 35px;
+		}
+		&__list {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			padding-right: 18px;
+		}
+		&__item {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 22px;
+			color: $main-text-color;
+
+			&:before {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: -1px;
+				content: '';
+			}
+			&_mail:before {
+				top: 4px;
+				width: 120px;
+				height: 123px;
+				margin-left: -18px;
+				background-image: url('../img/svgs/mail.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			&_phone:before {
+				top: -3px;
+				width: 111px;
+				height: 140px;
+				margin-right: -7px;
+				background-image: url('../img/svgs/phone.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+
+}
+
 
 

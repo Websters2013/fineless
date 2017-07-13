@@ -2,10 +2,19 @@
 .logo {
 	position: relative;
 	top: 5px;
+
+	svg {
+		width: 100%;
+	}
 }
 
-@media (min-width: $tablet-portrait) {
+@media (min-width: $tablet-landscape) {
 
+	.logo {
+		position: relative;
+		width: 227px;
+		top: 5px;
+	}
 
 }
 

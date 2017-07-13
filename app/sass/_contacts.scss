@@ -1,4 +1,39 @@
 
+.contacts {
+	margin-bottom: 160px;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 22px;
+		color: $main-text-color;
+
+		&:before {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+			content: '';
+		}
+		&_mail:before {
+			width: 80px;
+			height: 90px;
+			background-image: url('../img/svgs/mail.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		&_phone:before {
+			width: 70px;
+			height: 100px;
+			background-image: url('../img/svgs/phone.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+}
 
 @media (min-width: $tablet-portrait) {
 

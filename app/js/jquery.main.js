@@ -9,6 +9,12 @@
 
         } );
 
+        $.each( $( '.navigation' ), function() {
+
+            new ScrollToElement ( $( this ) );
+
+        } );
+
     });
 
     var Accordion = function ( obj ) {
@@ -83,6 +89,110 @@
 
                 return false
             };
+
+        _constructor();
+    };
+
+    var ScrollToElement = function ( obj ) {
+
+        //private properties
+        var _self = this,
+            _obj = obj,
+            _btns = _obj.find( 'a' ),
+            _item = $( '.navigation-item' ),
+            _scroller = $('html, body'),
+            _lastElement = $( '.connect-us' ),
+            _window = $( window );
+
+        //private methods
+        var _constructor = function () {
+                _obj[0].obj = _self;
+                _onEvents();
+
+                _window.trigger( 'scroll' );
+            },
+            _onEvents = function () {
+
+                _btns.on({
+                    click: function () {
+
+                        _scrollTo( $( this ) );
+                        return false;
+                    }
+                });
+                _window.on({
+                    scroll: function (  ) {
+
+                        _checkScroll( _window.scrollTop() );
+                    }
+                });
+            },
+            _checkScroll = function ( scroll ) {
+
+                var windowHeight = _window.height(),
+                    stopPosition = _lastElement.offset().top - ( windowHeight/2 ) - 10;
+
+                if ( scroll >=  stopPosition) {
+
+                    _obj.css({
+                        'margin-top': - ( scroll - stopPosition )
+                    });
+
+                } else {
+
+                    _obj.css({
+                        'margin-top': 0
+                    });
+                }
+
+                _item.each(function () {
+
+                    var curItem = $(this),
+                        topPos = curItem.offset().top,
+                        curItemId = curItem.attr( 'id' );
+
+                    if ( scroll > ( topPos - windowHeight / 2 ) ){
+
+                        _filterElems( curItemId );
+
+                    }
+
+                })
+            },
+            _filterElems = function ( name ) {
+
+                _btns.each( function () {
+
+                    var curBtn = $( this ),
+                        curHref = curBtn.attr( 'href' ).substring( 1 );
+
+                    if ( name === curHref ) {
+
+                        _btns.removeClass( 'active' );
+                        curBtn.addClass( 'active' );
+
+                        return false
+
+                    }
+
+                } );
+
+            },
+            _scrollTo = function ( elem ) {
+
+                var scrollElem = elem.attr( 'href' );
+
+                if ( scrollElem.length !== 0 ) {
+
+                    _scroller.animate( {scrollTop: $( scrollElem ).offset().top - 15 }, 500 );
+                }
+
+                return false;
+            };
+
+        //public properties
+
+        //public methods
 
         _constructor();
     };

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="124px" viewBox="0 0 120 124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>79E1858C-9243-4A61-AB5C-CAB57DB031B4</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M0,29 L80,29 L80,82.9999617 C80,86.3136914 77.3153812,89 74.0033657,89 L5.99663433,89 C2.68478464,89 0,86.3053629 0,82.9999617 L0,29 Z" id="path-1"></path>
+        <filter x="-43.8%" y="-41.7%" width="187.5%" height="216.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M0,29 L80,29 L80,22.0785854 C80,20.4188196 78.8028795,18.4791415 77.3133761,17.7398499 L42.6866239,0.553404252 C41.2028425,-0.183047399 38.8028795,-0.185887403 37.3133761,0.553404252 L2.68662393,17.7398499 C1.20284251,18.4763015 0,20.4120706 0,22.0785854 L0,29 Z" id="path-3"></path>
+        <filter x="-21.9%" y="-43.1%" width="143.8%" height="220.7%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Page-Desktop-1440" transform="translate(-480.000000, -4679.000000)">
+            <g id="Contacts" transform="translate(499.000000, 4569.000000)">
+                <g id="Group-24" transform="translate(1.000000, 115.000000)">
+                    <g id="Group-21">
+                        <g id="Rectangle-6">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <g id="Rectangle-6">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                            <use fill="#02C274" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        </g>
+                        <path d="M0,29 L80,29 L80,35.9214146 C80,37.5811804 78.8028795,39.5208585 77.3133761,40.2601501 L42.6866239,57.4465957 C41.2028425,58.1830474 38.8028795,58.1858874 37.3133761,57.4465957 L2.68662393,40.2601501 C1.20284251,39.5236985 0,37.5879294 0,35.9214146 L0,29 Z" id="Rectangle-6" fill="#00CE7A"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

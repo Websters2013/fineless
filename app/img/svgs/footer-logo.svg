@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="247px" height="61px" viewBox="0 0 247 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>FCAD4749-C47E-428E-9F0B-93DA2093AEE3</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Page-Desktop-1440" transform="translate(-140.000000, -5825.000000)">
+            <g id="Footer" transform="translate(0.000000, 5716.000000)">
+                <g id="Group" transform="translate(140.000000, 109.000000)">
+                    <text id="FINELESS" font-family="Montserrat-Bold, Montserrat" font-size="16" font-weight="bold" letter-spacing="16" fill="#FFFFFF">
+                        <tspan x="56.268" y="35">FINELES</tspan>
+                        <tspan x="236.428" y="35">S</tspan>
+                    </text>
+                    <rect id="Rectangle-3" fill="#FFFFFF" x="29" y="1" width="14" height="60"></rect>
+                    <polygon id="Rectangle-3" fill="#00CE7A" transform="translate(25.000000, 29.000000) rotate(-270.000000) translate(-25.000000, -29.000000) " points="18 4 32 4 32 54 18 54"></polygon>
+                    <rect id="Rectangle-3" fill="#FFFFFF" transform="translate(47.500000, 7.000000) rotate(-270.000000) translate(-47.500000, -7.000000) " x="40.5" y="-11.5" width="14" height="37"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,14 +1,36 @@
 .navigation {
-	display: flex;
-	flex-flow: column;
 
-	> a {
+	a {
+		position: relative;
 		font-size: 26px;
 		line-height: 1.77;
 		color: $main-text-color;
 		@include transition( all, $animation-time, 0 );
 
+		&:after {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			right: 0;
+			bottom: 4px;
+			left: 0;
+			height: 1px;
+			background: $main-green-color;
+			-webkit-transform: translateY(4px);
+			transform: translateY(4px);
+			@include transition(all, $animation-time, 0);
+			content: '';
+		}
 		&:hover {
+
+			&:after {
+				opacity: 1;
+				visibility: visible;
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+			}
+		}
+		&.active {
 			color: $main-green-color;
 		}
 	}

@@ -1,28 +1,30 @@
 
 .questions {
-	margin-bottom: 120px;
+	margin-bottom: 115px;
 
 	.site__title {
 		margin-bottom: 30px;
 	}
 
 	&__list {
-
+		//padding-top: 2px;
 	}
 	&__item {
 		position: relative;
+		max-width: 675px;
 		margin-bottom: 20px;
 	}
 	&__item-head {
 		position: relative;
 		font-weight: 700;
+		letter-spacing: 0.7px;
 		color: $main-green-color;
 		user-select: none;
 		cursor: pointer;
 	}
 	&__item-sub {
 		display: none;
-		padding-top: 5px;
+		padding-top: 10px;
 		margin-bottom: 8px;
 
 		p {

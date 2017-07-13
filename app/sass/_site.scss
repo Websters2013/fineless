@@ -25,15 +25,20 @@
   }
 
   &__footer-copyrights {
+    position: relative;
+    top: -1px;
+    min-width: 351px;
     font-size: 16px;
   }
   &__footer-info {
+    min-width: 319px;
 
     a {
       position: relative;
       display: inline-block;
-      margin-bottom: 3px;
       font-size: 22px;
+      letter-spacing: 0.8px;
+      line-height: 1;
       color: $main-green-color;
       font-weight: 700;
 
@@ -42,7 +47,7 @@
         visibility: hidden;
         position: absolute;
         right: 0;
-        bottom: 4px;
+        bottom: -2px;
         left: 0;
         height: 1px;
         background: $main-green-color;
@@ -62,8 +67,12 @@
       }
     }
     p {
+      position: relative;
+      top: -1px;
+      left: -2px;
       font-size: 22px;
-      line-height: 1.73;
+      line-height: 1.83;
+      letter-spacing: -0.1px;
     }
   }
 
@@ -93,7 +102,13 @@
     line-height: 1.2;
     color: $main-title-color;
     text-transform: uppercase;
-    @include title-font()
+    @include title-font();
+
+    &_big {
+      margin-bottom: 46.5px;
+      font-size: 56px;
+      letter-spacing: 16px;
+    }
   }
   &__text {
     max-width: 690px;
@@ -124,8 +139,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 312px;
-      margin: 0 140px;
+      height: 281px;
+      margin: 0 126px;
       padding: 0 15px;
     }
   }

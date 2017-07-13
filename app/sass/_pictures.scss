@@ -6,19 +6,9 @@
 
 	&__item {
 		width: 33.333%;
-		height: 10vw;
+		height: 37.7vw;
 		background-size: cover;
 		background-position: center;
-
-		&:nth-child(1) {
-			background: grey;
-		}
-		&:nth-child(2) {
-			background: green;
-		}
-		&:nth-child(3) {
-			background: yellow;
-		}
 	}
 }
 

@@ -1,20 +1,21 @@
 
 .problems {
-	margin-bottom: 60px;
+	margin-bottom: 117px;
 
 	&__list {
 
 	}
 	&__item {
 		position: relative;
-		margin-bottom: 35px;
+		max-width: 530px;
+		margin-bottom: 30px;
 	}
 	&__item-icon {
 		position: absolute;
-		width: 80px;
+		width: 120px;
 		height: 100%;
-		top: 0;
-		left: 0;
+		top: -4px;
+		left: -20px;
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
@@ -23,9 +24,10 @@
 		padding-left: 121px;
 	}
 	&__item-title {
-		margin-bottom: 30px;
+		margin-bottom: 9px;
 		font-size: 22px;
 		font-weight: 700;
+		letter-spacing: 1.1px;
 	}
 	&__item-text {
 

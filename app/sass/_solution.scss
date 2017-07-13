@@ -1,20 +1,20 @@
 
 .solution {
-	margin-bottom: 60px;
+	margin-bottom: 120px;
 
 	&__list {
 		counter-reset: list
 	}
 	&__item {
 		position: relative;
-		margin-bottom: 17.5px;
+		margin-bottom: 35px;
 	}
 	&__item-number {
 		position: absolute;
 		top: 2px;
 		left: 0;
-		width: 40px;
-		height: 40px;
+		width: 80px;
+		height: 80px;
 		border-radius: 50%;
 		background-color: $main-white-color;
 		box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
@@ -23,7 +23,8 @@
 			position: absolute;
 			top: -5px;
 			right: 5px;
-			font-size: 45px;
+			font-size: 90px;
+			line-height: 1;
 			font-weight: bold;
 			color: $main-green-color;
 			text-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
@@ -33,7 +34,7 @@
 	}
 	&__item-wrap {
 		position: relative;
-		padding-left: 60px;
+		padding-left: 120px;
 	}
 	&__item-title {
 		margin-bottom: 15px;

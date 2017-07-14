@@ -78,38 +78,7 @@
 @media (min-width: $desktop) {
 
 	.problems {
-		margin-bottom: 117px;
-
-		&__list {
-
-		}
-		&__item {
-			position: relative;
-			max-width: 530px;
-			margin-bottom: 30px;
-		}
-		&__item-icon {
-			position: absolute;
-			width: 120px;
-			height: 100%;
-			top: -4px;
-			left: -20px;
-			background-size: contain;
-			background-repeat: no-repeat;
-		}
-		&__item-wrap {
-			position: relative;
-			padding-left: 121px;
-		}
-		&__item-title {
-			margin-bottom: 9px;
-			font-size: 22px;
-			font-weight: 700;
-			letter-spacing: 1.1px;
-		}
-		&__item-text {
-
-		}
+		margin-bottom: 116px;
 	}
 
 }

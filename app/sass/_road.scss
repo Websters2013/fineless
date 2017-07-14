@@ -12,17 +12,21 @@
 		width: 100%;
 
 		svg {
+			position: absolute;
+			left: 0;
+			top: 0;
 			width: 100%;
 
-			.road__car-1 {
+			&.road__car-1 {
 				position: absolute;
 				animation: car-1 8s cubic-bezier(0.4, 0, 0.2, 1) infinite forwards;
 			}
-			.road__car-2 {
+			&.road__car-2 {
 				position: absolute;
 				animation: car-2 10s cubic-bezier(0.4, 0, 0.2, 1) infinite forwards;
 			}
 		}
+
 	}
 
 	@-webkit-keyframes car-1 {

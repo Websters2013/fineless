@@ -30,8 +30,7 @@
             _obj = obj,
             _accordionItem = _obj.find( '.questions__item' ),
             _accordionSub = _obj.find( '.questions__item-sub' ),
-            _accordionBtn = _accordionItem.find( '.questions__item-head' ),
-            _body = $('body');
+            _accordionBtn = _accordionItem.find( '.questions__item-head' );
 
         //private methods
         var _constructor = function () {
@@ -48,28 +47,6 @@
 
                     }
                 });
-                _obj.on( {
-                    click: function( event ) {
-
-                        event = event || window.event;
-
-                        if ( event.stopPropagation ) {
-                            event.stopPropagation();
-                        } else {
-                            event.cancelBubble = true;
-                        }
-
-                    }
-                } );
-                _body.on( {
-                    click: function() {
-
-                        _accordionItem.removeClass( 'active' );
-                        _accordionSub.slideUp( 200 );
-
-                    }
-                } );
-
 
             },
             _slideAccordion = function ( elem ) {
@@ -104,6 +81,7 @@
         //private properties
         var _self = this,
             _obj = obj,
+            _topLogo = $( '.site__header .logo' ),
             _btns = _obj.find( 'a' ),
             _subscribeBtn = $( '.subscribe-btn' ),
             _item = $( '.navigation-item' ),
@@ -111,12 +89,16 @@
             _lastElement = $( '.connect-us' ),
             _window = $( window );
 
+
+
         //private methods
         var _constructor = function () {
                 _obj[0].obj = _self;
                 _onEvents();
 
                 _window.trigger( 'scroll' );
+
+                console.log(_topLogo);
             },
             _onEvents = function () {
 
@@ -138,6 +120,12 @@
                     scroll: function (  ) {
 
                         _checkScroll( _window.scrollTop() );
+
+                        if ( _window.width() < 1024 ) {
+
+                            _showHideBtn( _window.scrollTop() )
+
+                        }
                     }
                 });
             },
@@ -151,10 +139,16 @@
                     _obj.css({
                         'margin-top': - ( scroll - stopPosition )
                     });
+                    _topLogo.css({
+                        'margin-top': - ( scroll - stopPosition )
+                    });
 
                 } else {
 
                     _obj.css({
+                        'margin-top': 0
+                    });
+                    _topLogo.css({
                         'margin-top': 0
                     });
                 }
@@ -172,6 +166,21 @@
                     }
 
                 })
+            },
+            _showHideBtn = function ( scroll ) {
+
+                var windowHeight = _window.height();
+
+                if ( scroll > _lastElement.offset().top - windowHeight && !_subscribeBtn.hasClass( 'hide' ) ) {
+
+                    _subscribeBtn.addClass( 'hide' )
+
+                } else if ( scroll < _lastElement.offset().top - windowHeight && _subscribeBtn.hasClass( 'hide' ) )  {
+
+                    _subscribeBtn.removeClass( 'hide' )
+
+                }
+
             },
             _filterElems = function ( name ) {
 

@@ -9,6 +9,7 @@
 	&__list {
 		display: flex;
 		flex-flow: column;
+		max-width: 785px;
 	}
 	&__item {
 		margin-bottom: 14px;
@@ -64,7 +65,11 @@
 		&__item {
 			margin-bottom: 0;
 			font-size: 22px;
+			@include transition( color, $animation-time, 0 );
 
+			&:hover {
+				color: $main-green-color;
+			}
 			&:before {
 				position: relative;
 				margin-right: -1px;

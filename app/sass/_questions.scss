@@ -43,6 +43,29 @@
 		}
 		&__item-head {
 			letter-spacing: 0;
+
+			span {
+				position: relative;
+				display: inline-block;
+
+				&:after {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					height: 1px;
+					width: 0;
+					background: $main-green-color;
+					@include transition( width, $animation-time, 0 );
+					content: '';
+				}
+			}
+
+			&:hover {
+
+				span:after {
+					width: 100%;
+				}
+			}
 		}
 		&__item-sub {
 			display: none;

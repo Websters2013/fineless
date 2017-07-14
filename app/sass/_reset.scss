@@ -38,7 +38,20 @@ input {
     &:-moz-placeholder           {color: transparent}
     &:-ms-input-placeholder      {color: transparent}
   }
+  &.valid {
+
+    &::-webkit-input-placeholder {color: rgba(87, 106, 126, 0.5)}
+    &:-moz-placeholder           {color: rgba(87, 106, 126, 0.5)}
+    &:-ms-input-placeholder      {color: rgba(87, 106, 126, 0.5)}
+  }
+  &.not-valid {
+
+    &::-webkit-input-placeholder {color: rgba(234, 0, 50, 0.5)}
+    &:-moz-placeholder           {color: rgba(234, 0, 50, 0.5)}
+    &:-ms-input-placeholder      {color: rgba(234, 0, 50, 0.5)}
+  }
 }
+
 @media (min-width: $tablet-landscape) {
 
   input {

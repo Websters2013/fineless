@@ -754,11 +754,11 @@
                 <!--/connect-us__title-->
 
                 <!--connect-us__form-->
-                <form method="post" action="php/form.php" class="connect-us__form">
+                <form method="post" action="php/form.php" class="connect-us__form validation-form">
 
-                    <input name="name" type="text" placeholder="Имя">
-                    <input name="company" type="text" placeholder="Компания">
-                    <input name="phoneOrEmail" type="email" placeholder="Телефон или Email">
+                    <input name="name" type="text" placeholder="Имя" data-required>
+                    <input name="company" type="text" placeholder="Компания" data-required>
+                    <input name="phoneOrEmail" type="text" placeholder="Телефон или Email" data-required>
 
                     <button class="btn" type="submit">
                         Отправить заявку

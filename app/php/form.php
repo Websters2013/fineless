@@ -1,7 +1,7 @@
 <?php
 $c = true;
 $project_name = 'new enquiry';
-$admin_email  = 'einzweindrey@gmail.com';
+$admin_email  = 'hello@fineless.com.ua';
 $form_subject = 'Fineless';
 
 foreach ( $_POST as $key => $value ) {

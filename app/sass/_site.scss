@@ -14,11 +14,12 @@
   &__header {
     position: relative;
     z-index: 3;
-    height: 162px;
+    height: 98px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 15px;
+    margin-bottom: 13px;
 
     .btn {
       position: fixed;
@@ -40,16 +41,18 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    padding-bottom: 50px;
+    padding-bottom: 78px;
+    padding-top: 25px;
   }
   &__footer-copyrights {
     order: 3;
-    font-size: 16px;
+    font-size: 14px;
   }
   &__footer-info {
     display: flex;
     flex-flow: column;
     order: 2;
+    margin-bottom: 27px;
 
     a {
       order: 2;
@@ -64,7 +67,9 @@
       order: 1;
       position: relative;
       font-size: 16px;
-      line-height: 2.38;
+      letter-spacing: 0;
+      padding-left: 5px;
+      line-height: 1.88;
     }
   }
   &__centered {
@@ -81,8 +86,8 @@
     display: none;
   }
   &__title {
-    max-width: 320px;
-    margin-bottom: 30px;
+    max-width: 275px;
+    margin-bottom: 31px;
     font-size: 20px;
     letter-spacing: 2px;
     line-height: 1.2;
@@ -98,8 +103,10 @@
   }
   &__text {
     max-width: 690px;
-    margin-bottom: 30px;
-    letter-spacing: 0.2px;
+    margin-bottom: 26px;
+    padding-right: 20px;
+    letter-spacing: 0.1px;
+
   }
 }
 @media (min-width: $tablet-landscape) {

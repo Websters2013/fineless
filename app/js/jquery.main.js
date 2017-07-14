@@ -251,7 +251,7 @@
                     type: _form.attr('method'),
                     url: _form.attr('action'),
                     data: form_data,
-                    success: function () {
+                    success: function ( msg ) {
 
                         _obj.addClass( 'active' );
                         _spinner.removeClass( 'active' );

@@ -1,27 +1,31 @@
 <?php
-$name = $_POST['name'];
-$company = $_POST['company'];
-$email = $_POST['phoneOrEmail'];
+$c = true;
+$project_name = 'new enquiry';
+$admin_email  = 'einzweindrey@gmail.com';
+$form_subject = 'Fineless';
 
-$name = htmlspecialchars($name);
-$company = htmlspecialchars($company);
-$email = htmlspecialchars($email);
-$name = urldecode($name);
-$company = urldecode($company);
-$email = urldecode($email);
-$name = trim($name);
-$company = trim($company);
-$email = trim($email);
+foreach ( $_POST as $key => $value ) {
+    if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+        $message .= "
+			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+			<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+			<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+		</tr>
+		";
+    }
+}
 
-//echo $fio;
-//echo "<br>";
-//echo $email;
-if ( mail("einzweindrey@gmail.com", "Fineless", "Name:".$name.". E-mail: ".$email ,"From: einzweindrey@gmail.com \r\n" ) )
-{
-    echo "сообщение успешно отправлено";
 
-} else {
+$message = "<table style='width: 100%;'>$message</table>";
 
-    echo "при отправке сообщения возникли ошибки";
+function adopt($text) {
+    return '=?UTF-8?B?'.base64_encode($text).'?=';
+}
 
-}?>
+$headers = "MIME-Version: 1.0" . PHP_EOL .
+    "Content-Type: text/html; charset=utf-8" . PHP_EOL .
+    'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
+    'Reply-To: '.$admin_email.'' . PHP_EOL;
+
+mail($admin_email, adopt($form_subject), $message, $headers );
+

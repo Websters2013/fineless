@@ -105,6 +105,7 @@
         var _self = this,
             _obj = obj,
             _btns = _obj.find( 'a' ),
+            _subscribeBtn = $( '.subscribe-btn' ),
             _item = $( '.navigation-item' ),
             _scroller = $('html, body'),
             _lastElement = $( '.connect-us' ),
@@ -120,6 +121,13 @@
             _onEvents = function () {
 
                 _btns.on({
+                    click: function () {
+
+                        _scrollTo( $( this ) );
+                        return false;
+                    }
+                });
+                _subscribeBtn.on({
                     click: function () {
 
                         _scrollTo( $( this ) );
@@ -187,6 +195,12 @@
             _scrollTo = function ( elem ) {
 
                 var scrollElem = elem.attr( 'href' );
+
+                if ( !scrollElem ) {
+
+                    scrollElem = elem.data( 'href' );
+
+                }
 
                 if ( scrollElem.length !== 0 ) {
 

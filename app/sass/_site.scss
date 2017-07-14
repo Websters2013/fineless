@@ -28,7 +28,7 @@
       bottom: 0;
       width: 100%;
       border-radius: 0;
-      @include transition( transform, $animation-time, 0 );
+      @include transition( all, $animation-time, 0 );
 
       &.hide {
         -webkit-transform: translateY( 100% );

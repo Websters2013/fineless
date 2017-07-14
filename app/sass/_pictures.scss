@@ -15,15 +15,10 @@
 @media (min-width: $tablet-landscape) {
 
 	.pictures {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 120px;
+		margin-bottom: 115px;
 
 		&__item {
-			width: 33.333%;
 			height: 37.7vw;
-			background-size: cover;
-			background-position: center;
 		}
 	}
 }

@@ -175,6 +175,8 @@
             },
             _filterElems = function ( name ) {
 
+                _btns.removeClass( 'active' );
+
                 _btns.each( function () {
 
                     var curBtn = $( this ),
@@ -182,7 +184,6 @@
 
                     if ( name === curHref ) {
 
-                        _btns.removeClass( 'active' );
                         curBtn.addClass( 'active' );
 
                         return false

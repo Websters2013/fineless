@@ -29,7 +29,7 @@ var paths = {
     images: 'app/img/**/*',
     pictures: 'app/pic/**/*',
     fonts: 'app/fonts/**/*',
-    video: 'app/video/**/*'
+    php: 'app/php/**/*'
 };
 
 
@@ -90,10 +90,10 @@ gulp.task( 'scripts', function () {
     }
 });
 
-gulp.task('video', function() {
-    return gulp.src(paths.video)
+gulp.task('php', function() {
+    return gulp.src(paths.php)
     // .pipe(imagemin({optimizationLevel: 5}))
-        .pipe(gulp.dest('dist/video'));
+        .pipe(gulp.dest('dist/php'));
 });
 
 
@@ -114,14 +114,14 @@ gulp.task('watch', function() {
     gulp.watch(paths.images,    ['images',  browserSync.reload]);
     gulp.watch(paths.pictures,    ['pictures',  browserSync.reload]);
     gulp.watch(paths.fonts,    ['fonts']);
-    gulp.watch(paths.fonts,    ['video']);
+    gulp.watch(paths.fonts,    ['php']);
     gulp.watch(paths.styles,    ['styles']);
     gulp.watch(paths.vendorStyles,    [ 'vendorStyles' ]);
     gulp.watch(paths.views,     ['views',   browserSync.reload]);
 });
 
 function serve() {
-    return run( 'styles', 'scripts', 'vendorScripts', 'vendorStyles', 'fonts', 'video', 'images', 'pictures', 'views', 'serve');
+    return run( 'styles', 'scripts', 'vendorScripts', 'vendorStyles', 'fonts', 'php', 'images', 'pictures', 'views', 'serve');
 }
 
 gulp.task('default', ['clean'], serve());

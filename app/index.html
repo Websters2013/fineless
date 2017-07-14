@@ -754,16 +754,36 @@
                 <!--/connect-us__title-->
 
                 <!--connect-us__form-->
-                <form class="connect-us__form">
+                <form method="post" action="php/form.php" class="connect-us__form">
 
                     <input name="name" type="text" placeholder="Имя">
                     <input name="company" type="text" placeholder="Компания">
                     <input name="phoneOrEmail" type="email" placeholder="Телефон или Email">
 
-                    <button class="btn" type="submit">Отправить заявку</button>
+                    <button class="btn" type="submit">
+                        Отправить заявку
+                        <span class="spinner">
+                            <span class="spinner__wrap">
+                                <svg class="circular" viewBox="25 25 50 50">
+
+                                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10"/>
+
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
 
                 </form>
                 <!--/connect-us__form-->
+
+                <!--connect-us__message-->
+                <div class="connect-us__message">
+
+                    <p>заявка отправлена
+                        Скоро мы с вами свяжемся</p>
+
+                </div>
+                <!--/connect-us__message-->
 
             </div>
             <!--/connect-us-->

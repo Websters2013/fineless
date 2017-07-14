@@ -15,6 +15,12 @@
 
         } );
 
+        $.each( $( '.connect-us' ), function() {
+
+            new SubscribeForm ( $( this ) );
+
+        } );
+
     });
 
     var Accordion = function ( obj ) {
@@ -130,7 +136,7 @@
             _checkScroll = function ( scroll ) {
 
                 var windowHeight = _window.height(),
-                    stopPosition = _lastElement.offset().top - ( windowHeight/2 ) - 10;
+                    stopPosition = _lastElement.offset().top - ( windowHeight/2 ) - 200;
 
                 if ( scroll >=  stopPosition) {
 
@@ -195,6 +201,64 @@
         //public methods
 
         _constructor();
+    };
+
+    var SubscribeForm = function ( obj ) {
+
+        //private properties
+        var _obj = obj,
+            _form = _obj.find( 'form' ),
+            _submitBtn = _form.find( '.btn' ),
+            _spinner = _submitBtn.find( '.spinner' ),
+            _request = new XMLHttpRequest();
+
+        //private methods
+        var _onEvents = function () {
+
+                _form.on({
+                    submit: function () {
+
+                        _sendForm();
+
+                        return false
+                    }
+                });
+
+            },
+            _sendForm = function(){
+
+                var form_data = _form.serialize();
+
+                _request.abort();
+
+                _spinner.addClass( 'active' );
+
+                _request = $.ajax({
+                    type: _form.attr('method'),
+                    url: _form.attr('action'),
+                    data: form_data,
+                    success: function () {
+
+                        _obj.addClass( 'active' );
+                        _spinner.removeClass( 'active' );
+                        _submitBtn.addClass( 'disabled' );
+
+                    },
+                    error: function ( XMLHttpRequest ) {
+
+
+                    }
+                });
+            },
+            _init = function () {
+                _onEvents();
+            };
+
+        //public properties
+
+        //public methods
+
+        _init();
     };
 
 } )();
